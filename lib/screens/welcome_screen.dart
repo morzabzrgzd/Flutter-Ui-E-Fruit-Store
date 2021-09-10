@@ -56,7 +56,7 @@ class WelcomeScreen extends StatelessWidget {
                       ),
                     ),
                   ),
-                  InkWell(
+                  GestureDetector(
                     onTap: () {
                       Navigator.of(context).push(
                         MaterialPageRoute(

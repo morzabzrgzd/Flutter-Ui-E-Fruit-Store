@@ -63,20 +63,7 @@ class AuthenticationScreen extends StatelessWidget {
                         ),
                       ),
                     ),
-                    // Padding(
-                    //   padding: const EdgeInsets.symmetric(
-                    //     vertical: 10,
-                    //   ),
-                    //   child: Text(
-                    //     'We deliver the best and freshest fruit salad in town. Order for a combo today!!!',
-                    //     style: TextStyle(
-                    //       color: kTextColor,
-                    //       fontWeight: FontWeight.w300,
-                    //       fontSize: size.width * 0.043,
-                    //     ),
-                    //   ),
-                    // ),
-                    InkWell(
+                    GestureDetector(
                       onTap: () {},
                       child: Container(
                         margin: EdgeInsets.only(top: size.height * 0.05),
