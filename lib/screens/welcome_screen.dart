@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:new_app/constants.dart';
+import 'package:new_app/screens/authentication_screen.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({Key? key}) : super(key: key);
@@ -55,20 +56,29 @@ class WelcomeScreen extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Container(
-                    margin: EdgeInsets.only(top: size.height * 0.06),
-                    alignment: Alignment.center,
-                    height: size.height * 0.06,
-                    width: double.infinity,
-                    decoration: BoxDecoration(
-                      color: kPrimeryColor,
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                    child: Text(
-                      'Let’s Continue',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: size.width * 0.045,
+                  InkWell(
+                    onTap: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (context) => const AuthenticationScreen(),
+                        ),
+                      );
+                    },
+                    child: Container(
+                      margin: EdgeInsets.only(top: size.height * 0.05),
+                      alignment: Alignment.center,
+                      height: size.height * 0.06,
+                      width: double.infinity,
+                      decoration: BoxDecoration(
+                        color: kPrimeryColor,
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: Text(
+                        'Let’s Continue',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: size.width * 0.045,
+                        ),
                       ),
                     ),
                   )
